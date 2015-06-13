@@ -5,3 +5,10 @@ C:\Virtual Studio Projects\Individuele Opdracht Bax\Individuele Opdracht Bax\bin
 C:\Virtual Studio Projects\Individuele Opdracht Bax\Individuele Opdracht Bax\bin\Oracle.ManagedDataAccess.dll
 C:\Virtual Studio Projects\Individuele Opdracht Bax\Individuele Opdracht Bax\obj\Debug\Individuele Opdracht Bax.dll
 C:\Virtual Studio Projects\Individuele Opdracht Bax\Individuele Opdracht Bax\obj\Debug\Individuele Opdracht Bax.pdb
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\bin\Individuele Opdracht Bax.dll.config
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\bin\Individuele Opdracht Bax.dll
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\bin\Individuele Opdracht Bax.pdb
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\bin\Oracle.ManagedDataAccess.dll
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\obj\Debug\Individuele Opdracht Bax.csprojResolveAssemblyReference.cache
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\obj\Debug\Individuele Opdracht Bax.dll
+C:\Users\Jim\Source\Repos\SE2IO\Individuele Opdracht Bax\Individuele Opdracht Bax\obj\Debug\Individuele Opdracht Bax.pdb

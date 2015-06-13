@@ -11,7 +11,12 @@ namespace Individuele_Opdracht_Bax
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void Redirect_Login(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }

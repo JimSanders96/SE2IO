@@ -13,6 +13,7 @@
     <div class="topBar">
         <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Bax_Logo.jpg" />
     </div>
+    
 
     <div>
         <asp:ContentPlaceHolder ID="Content" runat="server">
