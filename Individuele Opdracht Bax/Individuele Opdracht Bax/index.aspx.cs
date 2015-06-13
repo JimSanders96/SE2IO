@@ -18,5 +18,16 @@ namespace Individuele_Opdracht_Bax
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void Add_UserControl(object sender, EventArgs e)
+        {
+            var uc = (WebUserControl1)Page.LoadControl("test.ascx");
+
+
+            
+
+            innerContent.Controls.Add(uc);
+            
+        }
     }
 }
