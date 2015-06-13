@@ -60,6 +60,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Category.ascx" />
     <Content Include="Images\Bax_Logo.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config">
@@ -70,6 +71,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Product.cs" />
+    <Compile Include="Category.ascx.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category.ascx.designer.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+    </Compile>
     <Compile Include="DbProvider.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
