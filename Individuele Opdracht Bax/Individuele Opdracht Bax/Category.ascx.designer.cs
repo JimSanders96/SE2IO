@@ -10,24 +10,24 @@
 namespace Individuele_Opdracht_Bax {
     
     
-    public partial class WebForm1 {
+    public partial class Category {
         
         /// <summary>
-        /// BtnGoToLogin control.
+        /// ibCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnGoToLogin;
+        protected global::System.Web.UI.WebControls.ImageButton ibCategory;
         
         /// <summary>
-        /// innerContent control.
+        /// lblCategoryName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl innerContent;
+        protected global::System.Web.UI.WebControls.Label lblCategoryName;
     }
 }
