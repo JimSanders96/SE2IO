@@ -16,7 +16,7 @@ namespace Individuele_Opdracht_Bax
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
             LoadCategories();
         }
 
@@ -63,7 +63,7 @@ namespace Individuele_Opdracht_Bax
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon de categorieën niet laden.')</script>");
             }
-            
+
         }
     }
-    }
+}

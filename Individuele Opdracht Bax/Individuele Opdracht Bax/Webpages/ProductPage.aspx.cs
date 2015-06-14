@@ -71,7 +71,7 @@ namespace Individuele_Opdracht_Bax
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen producten laden.')</script>");
 
             }
-            
+
         }
     }
 }

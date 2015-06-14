@@ -19,7 +19,7 @@ namespace Individuele_Opdracht_Bax
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace Individuele_Opdracht_Bax
             ibProduct.ImageUrl = ImageLink;
             taDescription.Value = Description;
             lblProductName.Text = Name;
-            lblProductPrice.Text = Convert.ToString(Price); 
+            lblProductPrice.Text = Convert.ToString(Price);
         }
 
         /// <summary>

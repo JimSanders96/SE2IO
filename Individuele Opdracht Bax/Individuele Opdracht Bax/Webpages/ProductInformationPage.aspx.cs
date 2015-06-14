@@ -76,7 +76,7 @@ namespace Individuele_Opdracht_Bax.Webpages
             }
             catch
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen informatie laden.')</script>");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen reviews laden.')</script>");
 
             }
         }
@@ -166,7 +166,7 @@ namespace Individuele_Opdracht_Bax.Webpages
                 var comment = (string)taReview.Value;
                 var rating = 0;
 
-                if(rblRating.SelectedIndex == 0)
+                if (rblRating.SelectedIndex == 0)
                 {
                     rating = 1;
                 }
@@ -223,7 +223,7 @@ namespace Individuele_Opdracht_Bax.Webpages
 
                 com.ExecuteNonQuery();
 
-                
+
             }
             catch
             {

@@ -35,7 +35,7 @@ namespace Individuele_Opdracht_Bax
             }
             else
             {
-                
+
             }
         }
 
@@ -47,7 +47,7 @@ namespace Individuele_Opdracht_Bax
         {
             string user = "test";
 
-            if (Session["loggedin"] is bool && (bool)Session["loggedIn"]==true)
+            if (Session["loggedin"] is bool && (bool)Session["loggedIn"] == true)
             {
                 user = (string)Session["username"];
                 lblLoggedInUser.Text = user;
@@ -61,11 +61,11 @@ namespace Individuele_Opdracht_Bax
                     ShoppingCart = new ShoppingCart(user);
                 }
 
-                }
-                else
-                {
-                    lblLoggedInUser.Text = "Geen gebruiker ingelogd.";
-                }
             }
+            else
+            {
+                lblLoggedInUser.Text = "Geen gebruiker ingelogd.";
+            }
+        }
     }
 }

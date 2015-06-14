@@ -9,5 +9,5 @@
     <div class="categoryName">
         <asp:Label ID="lblCategoryName" runat="server" Text="Categorie"></asp:Label>
     </div>
-    
+
 </div>

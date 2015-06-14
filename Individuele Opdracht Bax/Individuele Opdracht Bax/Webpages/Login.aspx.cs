@@ -27,16 +27,16 @@ namespace Individuele_Opdracht_Bax
             }
         }
 
-       /// <summary>
-       /// Checks whether the combination of username and password exists in the database.
-       /// If the login is succesful, return to previously accessed webpage.
+        /// <summary>
+        /// Checks whether the combination of username and password exists in the database.
+        /// If the login is succesful, return to previously accessed webpage.
         /// If for any reason this cannot be done, a popup will appear.
-       /// </summary>
-       /// <param name="sender"></param>
-       /// <param name="e"></param>
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void submit_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 var username = tbUsername.Text;
                 var password = tbPassword.Value;
@@ -71,7 +71,7 @@ namespace Individuele_Opdracht_Bax
 
                     object refUrl = ViewState["RefUrl"];
                     if (refUrl != null)
-                    Response.Redirect((string)refUrl);
+                        Response.Redirect((string)refUrl);
 
                 }
                 else
@@ -87,8 +87,8 @@ namespace Individuele_Opdracht_Bax
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen gegevens controleren.')</script>");
             }
-            
-            
+
+
 
         }
 
@@ -101,7 +101,7 @@ namespace Individuele_Opdracht_Bax
         {
             object refUrl = ViewState["RefUrl"];
             if (refUrl != null)
-            Response.Redirect((string)refUrl);
-        }
+                Response.Redirect((string)refUrl);
         }
     }
+}

@@ -10,21 +10,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="topBar">
-        <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Bax_Logo.jpg" />
-        
-    </div>
-    
-    <div class="secondBar">
-        <asp:Label ID="lblLoggedInUser" runat="server" Text="Geen gebruiker ingelogd."></asp:Label>
-        <asp:Label ID="lblItemsInCart" runat="server" Text="Producten in winkelmand: 0"></asp:Label>
-    </div>
+        <div class="topBar">
+            <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Bax_Logo.jpg" />
 
-    <div>
-        <asp:ContentPlaceHolder ID="Content" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        </div>
+
+        <div class="secondBar">
+            <asp:Label ID="lblLoggedInUser" runat="server" Text="Geen gebruiker ingelogd."></asp:Label>
+            <asp:Label ID="lblItemsInCart" runat="server" Text="Producten in winkelmand: 0"></asp:Label>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>

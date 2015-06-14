@@ -2,7 +2,7 @@
 
 <div class="reviewContainer">
 
-    
+
     <div class="rating">
         <asp:Label ID="lblUser" runat="server" Text="User"></asp:Label>
         <asp:Label ID="lblRating" runat="server" Text="Rating"></asp:Label>

@@ -19,7 +19,7 @@ namespace Individuele_Opdracht_Bax
     {
         public List<int> ProductIds { get; set; }
         public int CustomerId { get; set; }
-        
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -28,7 +28,7 @@ namespace Individuele_Opdracht_Bax
         {
             ProductIds = new List<int>();
             CustomerId = GetCustomerId(sessionUsername);
-            
+
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace Individuele_Opdracht_Bax
             ProductIds.Add(productId);
         }
 
-        
-    
+
+
     }
 }
