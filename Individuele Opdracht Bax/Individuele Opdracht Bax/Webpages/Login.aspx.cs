@@ -77,7 +77,7 @@ namespace Individuele_Opdracht_Bax
                 else
                 {
                     //error
-                    Session.Clear();
+                    
                     Session["loggedIn"] = false;
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Gebruikersnaam / wachtwoord ongeldig.')</script>");
 
