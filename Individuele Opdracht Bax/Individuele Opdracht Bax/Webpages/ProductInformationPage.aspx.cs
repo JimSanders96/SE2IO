@@ -110,7 +110,7 @@ namespace Individuele_Opdracht_Bax.Webpages
             }
             catch
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen producten laden.')</script>");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen reviews laden.')</script>");
 
             }
 
@@ -124,6 +124,82 @@ namespace Individuele_Opdracht_Bax.Webpages
         protected void Redirect_Login(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void btnReview_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var con = DbProvider.GetOracleConnection();
+                var com = con.CreateCommand();
+                var productId = Convert.ToInt32(Session["productId"]);
+                var username = (string)Session["username"];
+                var comment = (string)taReview.Value;
+                var rating = 0;
+
+                if(rblRating.SelectedIndex == 0)
+                {
+                    rating = 1;
+                }
+                else if (rblRating.SelectedIndex == 1)
+                {
+                    rating = 2;
+                }
+                else if (rblRating.SelectedIndex == 2)
+                {
+                    rating = 3;
+                }
+                else if (rblRating.SelectedIndex == 3)
+                {
+                    rating = 4;
+                }
+                else if (rblRating.SelectedIndex == 4)
+                {
+                    rating = 5;
+                }
+
+                com.CommandText =
+                                    @"INSERT INTO REVIEW
+                                      VALUES(sq_review.nextval,:pid,:usr,:rat,:rev,sysdate)";
+
+
+                var pId = com.CreateParameter();
+                pId.DbType = DbType.String;
+                pId.Value = productId;
+                pId.ParameterName = "pid";
+                pId.Direction = ParameterDirection.Input;
+
+                var pUsername = com.CreateParameter();
+                pUsername.DbType = DbType.String;
+                pUsername.Value = username;
+                pUsername.ParameterName = "usr";
+                pUsername.Direction = ParameterDirection.Input;
+
+                var pReview = com.CreateParameter();
+                pReview.DbType = DbType.String;
+                pReview.Value = comment;
+                pReview.ParameterName = "rev";
+                pReview.Direction = ParameterDirection.Input;
+
+                var pRating = com.CreateParameter();
+                pRating.DbType = DbType.String;
+                pRating.Value = rating;
+                pRating.ParameterName = "rat";
+                pRating.Direction = ParameterDirection.Input;
+
+                com.Parameters.Add(pId);
+                com.Parameters.Add(pUsername);
+                com.Parameters.Add(pReview);
+                com.Parameters.Add(pRating);
+
+                com.ExecuteNonQuery();
+
+                
+            }
+            catch
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen review plaatsen.')</script>");
+            }
         }
 
     }

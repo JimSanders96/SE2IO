@@ -40,15 +40,6 @@ namespace Individuele_Opdracht_Bax.Webpages {
         protected global::System.Web.UI.WebControls.Button btnAddToCart;
         
         /// <summary>
-        /// btnReview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReview;
-        
-        /// <summary>
         /// imgProductMain control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,42 @@ namespace Individuele_Opdracht_Bax.Webpages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea taDescription;
+        
+        /// <summary>
+        /// lblRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRating;
+        
+        /// <summary>
+        /// rblRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblRating;
+        
+        /// <summary>
+        /// taReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea taReview;
+        
+        /// <summary>
+        /// btnReview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReview;
         
         /// <summary>
         /// reviews control.

@@ -8,7 +8,7 @@
            
             <asp:Button ID="BtnGoToLogin" runat="server" Text="Inloggen" OnClick="Redirect_Login" />
             <asp:Button ID="btnAddToCart" runat="server" Text="Voeg toe aan winkelmand" OnClick="btnAddToCart_Click"/>
-            <asp:Button ID="btnReview" runat="server" Text="Plaats beoordeling" />
+            
         </div>
 
         <div class="ProductImages">
@@ -26,6 +26,18 @@
         <textarea id="taDescription" cols="100" rows="2" runat="server" disabled="disabled"></textarea>
 
         
+    </div>
+    <div id="newReview">
+        <asp:Label ID="lblRating" runat="server" Text="Beoordeling:"></asp:Label>
+        <asp:RadioButtonList ID="rblRating" runat="server">
+            <asp:ListItem Selected="True">1</asp:ListItem>
+            <asp:ListItem>2</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            <asp:ListItem>4</asp:ListItem>
+            <asp:ListItem>5</asp:ListItem>
+        </asp:RadioButtonList>
+        <textarea id="taReview" cols="50" rows="3" runat="server"></textarea>
+        <asp:Button ID="btnReview" runat="server" Text="Plaats beoordeling" OnClick="btnReview_Click" />
     </div>
     <div id="reviews" clientidmode="Static" runat="server">
 
