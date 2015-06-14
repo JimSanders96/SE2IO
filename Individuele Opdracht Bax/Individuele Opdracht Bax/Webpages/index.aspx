@@ -8,10 +8,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
     <div class="goToLogin">
         <asp:Button ID="BtnGoToLogin" runat="server" Text="Inloggen" OnClick="Redirect_Login" />
-        <h1>
-            U bevindt zich in de categorie [Gitaar]. 
-        </h1>
+        
     </div>
+
+    <h1>
+        U bevindt zich in de categorie [Gitaar]. 
+    </h1>
 
     <div id="innerContent" clientidmode="Static" runat="server">
         

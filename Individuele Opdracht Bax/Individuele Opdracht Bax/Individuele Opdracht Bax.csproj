@@ -80,6 +80,7 @@
       <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
     <Compile Include="DbProvider.cs" />
+    <Compile Include="ShoppingCart.cs" />
     <Compile Include="Webpages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

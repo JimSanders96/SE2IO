@@ -53,6 +53,7 @@ namespace Individuele_Opdracht_Bax
                 //login
                 Session["loggedIn"] = true;
                 Session["username"] = username;
+                 
                 Response.Redirect("index.aspx");
                 
             }

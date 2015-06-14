@@ -15,6 +15,8 @@ namespace Individuele_Opdracht_Bax
             UpdateLoginLabel();
         }
 
+
+
         public void UpdateLoginLabel()
         {
             if (Session["loggedin"] is bool && (bool)Session["loggedIn"]==true)

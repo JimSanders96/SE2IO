@@ -49,6 +49,15 @@ namespace Individuele_Opdracht_Bax {
         protected global::System.Web.UI.WebControls.Label lblLoggedInUser;
         
         /// <summary>
+        /// lblItemsInCart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblItemsInCart;
+        
+        /// <summary>
         /// Content control.
         /// </summary>
         /// <remarks>
