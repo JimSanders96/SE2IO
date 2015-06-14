@@ -9,24 +9,47 @@ namespace Individuele_Opdracht_Bax
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
-
+        public ShoppingCart ShoppingCart { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             UpdateLoginLabel();
         }
 
-
-
-        public void UpdateLoginLabel()
+        public void UpdateShoppingCart()
         {
-            if (Session["loggedin"] is bool && (bool)Session["loggedIn"]==true)
+            if (Session["addToCart"] is bool && (bool)Session["loggedIn"])
             {
-                lblLoggedInUser.Text = (string)Session["username"];
+                lblItemsInCart.Text = "Producten in winkelwagen: " + Convert.ToString(ShoppingCart.ProductIds.Count);
             }
             else
             {
-                lblLoggedInUser.Text = "Geen gebruiker ingelogd.";
+                
             }
         }
+
+        public void UpdateLoginLabel()
+        {
+            string user = "test";
+
+            if (Session["loggedin"] is bool && (bool)Session["loggedIn"]==true)
+            {
+                user = (string)Session["username"];
+                lblLoggedInUser.Text = user;
+
+                if (Session["addToCart"] is bool && (bool)Session["loggedIn"])
+                {
+                    lblItemsInCart.Text = "Producten in winkelwagen: " + Convert.ToString(ShoppingCart.ProductIds.Count);
+                }
+                else
+                {
+                    ShoppingCart = new ShoppingCart(user);
+                }
+
+                }
+                else
+                {
+                    lblLoggedInUser.Text = "Geen gebruiker ingelogd.";
+                }
+            }
     }
 }
