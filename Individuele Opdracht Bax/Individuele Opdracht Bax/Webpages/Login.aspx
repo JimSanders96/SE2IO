@@ -7,4 +7,5 @@
     <asp:Label ID="lblPassword" runat="server" Text="Wachtwoord"></asp:Label>
     <asp:TextBox ID="tbPassword" runat="server"></asp:TextBox>
     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="submit_Click"/>
+    <asp:Button ID="btnReturn" runat="server" Text="Terug" OnClick="btnReturn_Click"/>
 </asp:Content>

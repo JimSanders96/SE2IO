@@ -13,6 +13,10 @@ namespace Individuele_Opdracht_Bax
         protected void Page_Load(object sender, EventArgs e)
         {
             UpdateLoginLabel();
+            if (Session["loggedIn"] == null)
+            {
+                Session["loggedIn"] = false;
+            }
         }
 
         public void UpdateShoppingCart()

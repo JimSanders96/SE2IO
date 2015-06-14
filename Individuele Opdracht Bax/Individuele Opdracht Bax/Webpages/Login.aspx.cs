@@ -16,7 +16,10 @@ namespace Individuele_Opdracht_Bax
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                ViewState["RefUrl"] = Request.UrlReferrer.ToString();
+            }
         }
 
         // Wanneer er op 'Login' geklikt wordt, wordt gekeken of de ingevulde gebruikersnaam en wachtwoord als 1 account bestaan
@@ -56,7 +59,9 @@ namespace Individuele_Opdracht_Bax
                     Session["loggedIn"] = true;
                     Session["username"] = username;
 
-                    Response.Redirect("index.aspx");
+                    object refUrl = ViewState["RefUrl"];
+                    if (refUrl != null)
+                    Response.Redirect((string)refUrl);
 
                 }
                 else
@@ -75,6 +80,13 @@ namespace Individuele_Opdracht_Bax
             
             
 
+        }
+
+        protected void btnReturn_Click(object sender, EventArgs e)
+        {
+            object refUrl = ViewState["RefUrl"];
+            if (refUrl != null)
+            Response.Redirect((string)refUrl);
         }
         }
     }
