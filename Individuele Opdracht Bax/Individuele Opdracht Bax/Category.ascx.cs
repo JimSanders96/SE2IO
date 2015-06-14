@@ -30,5 +30,10 @@ namespace Individuele_Opdracht_Bax
             ibCategory.ImageUrl = ImageLink;
             lblCategoryName.Text = Name;
         }
+
+        protected void ibCategory_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("ProductPage.aspx");
+        }
     }
 }

@@ -3,7 +3,7 @@
 <div class="categoryContainer">
 
     <div class="categoryImage">
-        <asp:ImageButton ID="ibCategory" runat="server" />
+        <asp:ImageButton ID="ibCategory" runat="server" OnClick="ibCategory_Click" />
     </div>
 
     <div class="categoryName">
