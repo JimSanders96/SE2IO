@@ -53,7 +53,6 @@ namespace Individuele_Opdracht_Bax
                 //login
                 Session["loggedIn"] = true;
                 Session["username"] = username;
-                lblPassword.Text = "loggedIn!";
                 Response.Redirect("index.aspx");
                 
             }
@@ -62,7 +61,7 @@ namespace Individuele_Opdracht_Bax
                 //error
                 Session.Clear();
                 Session["loggedIn"] = false;
-                lblPassword.Text = "not loggedIn!";
+                
             }
             
 

@@ -11,7 +11,7 @@ namespace Individuele_Opdracht_Bax
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+             
             LoadCategories();
         }
 
@@ -25,17 +25,6 @@ namespace Individuele_Opdracht_Bax
             Response.Redirect("Login.aspx");
         }
 
-        /// <summary>
-        /// Test method. This method adds a test user control to the index webpage.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void Add_UserControl(object sender, EventArgs e)
-        {
-            var uc = (WebUserControl1)Page.LoadControl("test.ascx");
-            innerContent.Controls.Add(uc);
-            
-        }
 
         private void LoadCategories()
         {

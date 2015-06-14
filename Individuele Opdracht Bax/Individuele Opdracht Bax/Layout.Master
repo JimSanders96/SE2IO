@@ -12,6 +12,7 @@
     <form id="form1" runat="server">
     <div class="topBar">
         <asp:Image ID="Logo" runat="server" ImageUrl="~/Images/Bax_Logo.jpg" />
+        <asp:Label ID="lblLoggedInUser" runat="server" Text="Geen gebruiker ingelogd."></asp:Label>
     </div>
     
 

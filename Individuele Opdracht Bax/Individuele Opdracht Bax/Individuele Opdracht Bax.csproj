@@ -67,7 +67,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="index.aspx" />
-    <Content Include="test.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Data\Product.cs" />
@@ -100,13 +99,6 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test.ascx.cs">
-      <DependentUpon>test.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.ascx.designer.cs">
-      <DependentUpon>test.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
