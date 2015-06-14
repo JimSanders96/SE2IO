@@ -15,6 +15,7 @@ namespace Individuele_Opdracht_Bax
         public String Description { get; set; }
         public double Price { get; set; }
         public String ImageLink { get; set; }
+        public int ProductId { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,6 +28,12 @@ namespace Individuele_Opdracht_Bax
             taDescription.Value = Description;
             lblProductName.Text = Name;
             lblProductPrice.Text = Convert.ToString(Price); 
+        }
+
+        protected void ibProduct_Click(object sender, EventArgs e)
+        {
+            Session["productId"] = ProductId;
+            Response.Redirect("~/Webpages/ProductInformationPage.aspx");
         }
     }
 }

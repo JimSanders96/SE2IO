@@ -5,7 +5,7 @@
     <asp:Label ID="lblProductName" runat="server" Text="Product"></asp:Label>
     <asp:Label ID="lblProductPrice" runat="server" Text="Price"></asp:Label>
     <div class="productImage">
-        <asp:ImageButton ID="ibProduct" runat="server" />
+        <asp:ImageButton ID="ibProduct" runat="server" OnClick="ibProduct_Click" />
     </div>
     <textarea id="taDescription" cols="100" rows="2" runat="server" disabled></textarea>
 

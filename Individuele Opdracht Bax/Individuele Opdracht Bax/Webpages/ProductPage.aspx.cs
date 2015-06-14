@@ -25,7 +25,7 @@ namespace Individuele_Opdracht_Bax
             var categoryName = (string)Session["categoryName"];
 
             com.CommandText =
-                                @"SELECT p.naam,p.standaardplaatje,p.prijs,p.beschrijving
+                                @"SELECT p.naam,p.standaardplaatje,p.prijs,p.beschrijving,p.artikelnummer
                                 FROM PRODUCT p, CATEGORIE_PRODUCT c
                                 WHERE p.artikelnummer = c.artikelnummer
                                 AND c.categorieId = :cid";
@@ -49,6 +49,7 @@ namespace Individuele_Opdracht_Bax
                 uc.ImageLink = (string)r["standaardplaatje"];
                 uc.Price = (double)r["prijs"];
                 uc.Description = (string)r["beschrijving"];
+                uc.ProductId = Convert.ToInt32(r["artikelnummer"]);
 
                 innerContent.Controls.Add(uc);
                 uc.LoadData();
