@@ -23,47 +23,56 @@ namespace Individuele_Opdracht_Bax
         // in de database. De text van het label 'lblPassword' wordt aangepast n.a.v. de uitkomst van de controle.
         protected void submit_Click(object sender, EventArgs e)
         {
-            var username = tbUsername.Text;
-            var password = tbPassword.Text;
-            var con = DbProvider.GetOracleConnection();
-            var com = con.CreateCommand();
-            com.CommandText = "SELECT count(*) FROM ACCOUNT WHERE Gebruikersnaam = :usr AND Wachtwoord = :pass";
-            
-            
-            var pUser = com.CreateParameter();
-            pUser.DbType= DbType.String;
-            pUser.Value = username;
-            pUser.ParameterName = "usr";
-            pUser.Direction= ParameterDirection.Input;
-
-            var pPass = com.CreateParameter();
-            pPass.DbType = DbType.String;
-            pPass.Value = password;
-            pPass.ParameterName = "pass";
-            pPass.Direction = ParameterDirection.Input;
-
-            com.Parameters.Add(pUser);
-            com.Parameters.Add(pPass);
-            
-            Debug.WriteLine(pPass.Value);
-            var cnt = (decimal)com.ExecuteScalar();
-            Debug.WriteLine(cnt);
-            if (cnt >= 1)
+            try 
             {
-                //login
-                Session["loggedIn"] = true;
-                Session["username"] = username;
-                 
-                Response.Redirect("index.aspx");
-                
+                var username = tbUsername.Text;
+                var password = tbPassword.Text;
+                var con = DbProvider.GetOracleConnection();
+                var com = con.CreateCommand();
+                com.CommandText = "SELECT count(*) FROM ACCOUNT WHERE Gebruikersnaam = :usr AND Wachtwoord = :pass";
+
+
+                var pUser = com.CreateParameter();
+                pUser.DbType = DbType.String;
+                pUser.Value = username;
+                pUser.ParameterName = "usr";
+                pUser.Direction = ParameterDirection.Input;
+
+                var pPass = com.CreateParameter();
+                pPass.DbType = DbType.String;
+                pPass.Value = password;
+                pPass.ParameterName = "pass";
+                pPass.Direction = ParameterDirection.Input;
+
+                com.Parameters.Add(pUser);
+                com.Parameters.Add(pPass);
+
+                Debug.WriteLine(pPass.Value);
+                var cnt = (decimal)com.ExecuteScalar();
+                Debug.WriteLine(cnt);
+                if (cnt >= 1)
+                {
+                    //login
+                    Session["loggedIn"] = true;
+                    Session["username"] = username;
+
+                    Response.Redirect("index.aspx");
+
+                }
+                else
+                {
+                    //error
+                    Session.Clear();
+                    Session["loggedIn"] = false;
+                    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Gebruikersnaam / wachtwoord ongeldig.')</script>");
+
+                }
             }
-            else
+            catch
             {
-                //error
-                Session.Clear();
-                Session["loggedIn"] = false;
-                
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen gegevens controleren.')</script>");
             }
+            
             
 
         }

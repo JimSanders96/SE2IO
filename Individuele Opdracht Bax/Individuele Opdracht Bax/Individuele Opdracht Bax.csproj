@@ -62,6 +62,7 @@
   <ItemGroup>
     <Content Include="Category.ascx" />
     <Content Include="Images\Bax_Logo.jpg" />
+    <Content Include="Review.ascx" />
     <Content Include="Webpages\Login.aspx" />
     <Content Include="Product.ascx" />
     <Content Include="Webpages\ProductInformationPage.aspx" />
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="DbProvider.cs" />
     <Compile Include="App_Data\ShoppingCart.cs" />
+    <Compile Include="Review.ascx.cs">
+      <DependentUpon>Review.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review.ascx.designer.cs">
+      <DependentUpon>Review.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Webpages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

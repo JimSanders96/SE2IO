@@ -20,40 +20,49 @@ namespace Individuele_Opdracht_Bax
 
         private void LoadProducts()
         {
-            var con = DbProvider.GetOracleConnection();
-            var com = con.CreateCommand();
-            var categoryName = (string)Session["categoryName"];
+            try
+            {
+                var con = DbProvider.GetOracleConnection();
+                var com = con.CreateCommand();
+                var categoryName = (string)Session["categoryName"];
 
-            com.CommandText =
-                                @"SELECT p.naam,p.standaardplaatje,p.prijs,p.beschrijving,p.artikelnummer
+                com.CommandText =
+                                    @"SELECT p.naam,p.standaardplaatje,p.prijs,p.beschrijving,p.artikelnummer
                                 FROM PRODUCT p, CATEGORIE_PRODUCT c
                                 WHERE p.artikelnummer = c.artikelnummer
                                 AND c.categorieId = :cid";
 
 
-            var pCategory = com.CreateParameter();
-            pCategory.DbType = DbType.String;
-            pCategory.Value = categoryName;
-            pCategory.ParameterName = "cid";
-            pCategory.Direction = ParameterDirection.Input;
+                var pCategory = com.CreateParameter();
+                pCategory.DbType = DbType.String;
+                pCategory.Value = categoryName;
+                pCategory.ParameterName = "cid";
+                pCategory.Direction = ParameterDirection.Input;
 
-            com.Parameters.Add(pCategory);
+                com.Parameters.Add(pCategory);
 
-            var r = com.ExecuteReader();
+                var r = com.ExecuteReader();
 
-            while (r.Read())
-            {
-                var uc = (Product)Page.LoadControl("~/Product.ascx");
+                while (r.Read())
+                {
+                    var uc = (Product)Page.LoadControl("~/Product.ascx");
 
-                uc.Name = (string)r["naam"];
-                uc.ImageLink = (string)r["standaardplaatje"];
-                uc.Price = (double)r["prijs"];
-                uc.Description = (string)r["beschrijving"];
-                uc.ProductId = Convert.ToInt32(r["artikelnummer"]);
+                    uc.Name = (string)r["naam"];
+                    uc.ImageLink = (string)r["standaardplaatje"];
+                    uc.Price = (double)r["prijs"];
+                    uc.Description = (string)r["beschrijving"];
+                    uc.ProductId = Convert.ToInt32(r["artikelnummer"]);
 
-                innerContent.Controls.Add(uc);
-                uc.LoadData();
+                    innerContent.Controls.Add(uc);
+                    uc.LoadData();
+                }
             }
+            catch
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon geen producten laden.')</script>");
+
+            }
+            
         }
     }
 }

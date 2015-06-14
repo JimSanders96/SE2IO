@@ -28,26 +28,34 @@ namespace Individuele_Opdracht_Bax
 
         private void LoadCategories()
         {
-            var con = DbProvider.GetOracleConnection();
-            var com = con.CreateCommand();
-            
-            com.CommandText =
-                                @"SELECT naam,plaatje
+            try
+            {
+                var con = DbProvider.GetOracleConnection();
+                var com = con.CreateCommand();
+
+                com.CommandText =
+                                    @"SELECT naam,plaatje
                                 FROM CATEGORIE
                                 WHERE BehoortTot = 'Gitaar'";
-            
-            var r = com.ExecuteReader();
 
-            while (r.Read())
-            {
-                var uc = (Category)Page.LoadControl("~/Category.ascx");
+                var r = com.ExecuteReader();
 
-                uc.Name = (string) r["naam"];
-                uc.ImageLink = (string) r["plaatje"];
-            
-                innerContent.Controls.Add(uc);
-                uc.LoadData();
+                while (r.Read())
+                {
+                    var uc = (Category)Page.LoadControl("~/Category.ascx");
+
+                    uc.Name = (string)r["naam"];
+                    uc.ImageLink = (string)r["plaatje"];
+
+                    innerContent.Controls.Add(uc);
+                    uc.LoadData();
+                }
             }
+            catch
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Kon de categorieën niet laden.')</script>");
+            }
+            
         }
     }
     }
