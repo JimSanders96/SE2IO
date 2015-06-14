@@ -62,13 +62,13 @@
   <ItemGroup>
     <Content Include="Category.ascx" />
     <Content Include="Images\Bax_Logo.jpg" />
-    <Content Include="Login.aspx" />
+    <Content Include="Webpages\Login.aspx" />
     <Content Include="Product.ascx" />
-    <Content Include="ProductPage.aspx" />
+    <Content Include="Webpages\ProductPage.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="index.aspx" />
+    <Content Include="Webpages\index.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.ascx.cs">
@@ -79,11 +79,11 @@
       <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
     <Compile Include="DbProvider.cs" />
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="Webpages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="Webpages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.ascx.cs">
@@ -93,11 +93,11 @@
     <Compile Include="Product.ascx.designer.cs">
       <DependentUpon>Product.ascx</DependentUpon>
     </Compile>
-    <Compile Include="ProductPage.aspx.cs">
+    <Compile Include="Webpages\ProductPage.aspx.cs">
       <DependentUpon>ProductPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductPage.aspx.designer.cs">
+    <Compile Include="Webpages\ProductPage.aspx.designer.cs">
       <DependentUpon>ProductPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,11 +108,11 @@
     <Compile Include="Layout.Master.designer.cs">
       <DependentUpon>Layout.Master</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
+    <Compile Include="Webpages\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="Webpages\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

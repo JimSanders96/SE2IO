@@ -33,6 +33,7 @@ namespace Individuele_Opdracht_Bax
 
         protected void ibCategory_Click(object sender, ImageClickEventArgs e)
         {
+            Session["categoryName"] = Name;
             Response.Redirect("ProductPage.aspx");
         }
     }
