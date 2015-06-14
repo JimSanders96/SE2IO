@@ -18,6 +18,9 @@ namespace Individuele_Opdracht_Bax
 
         }
 
+        /// <summary>
+        /// Set values for information objects.
+        /// </summary>
         public void LoadData()
         {
             lblRating.Text = "Beoordeling: " + Convert.ToString(Rating);

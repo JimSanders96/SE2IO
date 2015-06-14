@@ -22,6 +22,9 @@ namespace Individuele_Opdracht_Bax
             
         }
 
+        /// <summary>
+        /// Set values for information objects.
+        /// </summary>
         public void LoadData()
         {
             ibProduct.ImageUrl = ImageLink;
@@ -30,6 +33,11 @@ namespace Individuele_Opdracht_Bax
             lblProductPrice.Text = Convert.ToString(Price); 
         }
 
+        /// <summary>
+        /// Redirect to the productinformationpage of the selected product.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ibProduct_Click(object sender, EventArgs e)
         {
             Session["productId"] = ProductId;

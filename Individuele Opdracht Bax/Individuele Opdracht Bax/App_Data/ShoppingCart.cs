@@ -11,11 +11,19 @@ using System.Web.UI.WebControls;
 
 namespace Individuele_Opdracht_Bax
 {
+    /// <summary>
+    /// This class was supposed to be a way of storing product ID's for later insertion into the database.
+    /// However, there was no time to correctly implement this.
+    /// </summary>
     public class ShoppingCart
     {
         public List<int> ProductIds { get; set; }
         public int CustomerId { get; set; }
         
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="sessionUsername"></param>
         public ShoppingCart(string sessionUsername)
         {
             ProductIds = new List<int>();
@@ -23,6 +31,11 @@ namespace Individuele_Opdracht_Bax
             
         }
 
+        /// <summary>
+        /// Return the customerId from a given username.
+        /// </summary>
+        /// <param name="sessionUsername"></param>
+        /// <returns></returns>
         public int GetCustomerId(string sessionUsername)
         {
             int customerId = -1;
@@ -55,15 +68,14 @@ namespace Individuele_Opdracht_Bax
             return customerId;
         }
 
+
+
         public void AddProductId(int productId)
         {
             ProductIds.Add(productId);
         }
 
-        public void CreateOrder()
-        {
-
-        }
+        
     
     }
 }

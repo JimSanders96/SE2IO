@@ -9,10 +9,14 @@ using Oracle.ManagedDataAccess.Client;
 namespace Individuele_Opdracht_Bax
 {
     /// <summary>
-    /// Deze klasse 
+    /// This class serves as a connection to the database.
     /// </summary>
     public static class DbProvider
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static DbConnection GetOracleConnection()
         {
             var con = OracleClientFactory.Instance.CreateConnection();

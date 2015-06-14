@@ -9,6 +9,11 @@ namespace Individuele_Opdracht_Bax
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        /// <summary>
+        /// Load all categories.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
              
@@ -25,7 +30,10 @@ namespace Individuele_Opdracht_Bax
             Response.Redirect("Login.aspx");
         }
 
-
+        /// <summary>
+        /// Create a category object on the webpage for each subcategory withinin the main category 'Gitaar'.
+        /// If for any reason this cannot be done, a popup will appear.
+        /// </summary>
         private void LoadCategories()
         {
             try

@@ -13,11 +13,20 @@ namespace Individuele_Opdracht_Bax
 {
     public partial class ProductPage : System.Web.UI.Page
     {
+        /// <summary>
+        /// Load all products.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadProducts();
         }
 
+        /// <summary>
+        /// Creates an object for every product within the selected category.
+        /// If for any reason this cannot be done, a popup will appear.
+        /// </summary>
         private void LoadProducts()
         {
             try

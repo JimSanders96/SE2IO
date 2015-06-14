@@ -11,8 +11,17 @@ using System.Web.UI.WebControls;
 
 namespace Individuele_Opdracht_Bax.Webpages
 {
+    /// <summary>
+    /// This webpage contains all data about the currently selected product.
+    /// </summary>
     public partial class ProductInformationPage : System.Web.UI.Page
     {
+        /// <summary>
+        /// Load productdata and reviews.
+        /// Also, if there is no user currently logged in, the review-placement will be invisible.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadProduct();
@@ -20,9 +29,14 @@ namespace Individuele_Opdracht_Bax.Webpages
             if (Session["loggedIn"] is bool && (bool)Session["loggedIn"] == false)
             {
                 btnReview.Visible = false;
+                taReview.Visible = false;
+                rblRating.Visible = false;
             }
         }
 
+        /// <summary>
+        /// Load all required productdata into the labels and images etc.
+        /// </summary>
         private void LoadProduct()
         {
             try
@@ -67,12 +81,21 @@ namespace Individuele_Opdracht_Bax.Webpages
             }
         }
 
+        /// <summary>
+        /// Set the 'addedToCart' session to 'true'.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
             Session["addedToCart"] = true;
 
         }
 
+        /// <summary>
+        /// Create a review object on the webpage for each review placed on this product.
+        /// If for any reason this cannot be done, a popup will appear.
+        /// </summary>
         private void LoadComments()
         {
             try
@@ -117,7 +140,7 @@ namespace Individuele_Opdracht_Bax.Webpages
         }
 
         /// <summary>
-        /// Redirect to displayed website the login webpage.
+        /// Redirect to the login webpage.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -126,6 +149,12 @@ namespace Individuele_Opdracht_Bax.Webpages
             Response.Redirect("Login.aspx");
         }
 
+        /// <summary>
+        /// When this button is clicked, it is supposed to insert a review into the database.
+        /// If for some reason the insert cannot be done, a popup will show on the webpage.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnReview_Click(object sender, EventArgs e)
         {
             try

@@ -23,7 +23,7 @@ namespace Individuele_Opdracht_Bax
         }
 
         /// <summary>
-        /// 
+        /// Set values for information objects.
         /// </summary>
         public void LoadData()
         {
@@ -31,6 +31,11 @@ namespace Individuele_Opdracht_Bax
             lblCategoryName.Text = Name;
         }
 
+        /// <summary>
+        /// Redirect to 'productpage' and create a session for the categoryname.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ibCategory_Click(object sender, ImageClickEventArgs e)
         {
             Session["categoryName"] = Name;

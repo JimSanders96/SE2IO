@@ -14,6 +14,11 @@ namespace Individuele_Opdracht_Bax
 {
     public partial class Login : System.Web.UI.Page
     {
+        /// <summary>
+        /// Create a viewstate of the previously accessed webpage.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,14 +27,19 @@ namespace Individuele_Opdracht_Bax
             }
         }
 
-        // Wanneer er op 'Login' geklikt wordt, wordt gekeken of de ingevulde gebruikersnaam en wachtwoord als 1 account bestaan
-        // in de database. De text van het label 'lblPassword' wordt aangepast n.a.v. de uitkomst van de controle.
+       /// <summary>
+       /// Checks whether the combination of username and password exists in the database.
+       /// If the login is succesful, return to previously accessed webpage.
+        /// If for any reason this cannot be done, a popup will appear.
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         protected void submit_Click(object sender, EventArgs e)
         {
             try 
             {
                 var username = tbUsername.Text;
-                var password = tbPassword.Text;
+                var password = tbPassword.Value;
                 var con = DbProvider.GetOracleConnection();
                 var com = con.CreateCommand();
                 com.CommandText = "SELECT count(*) FROM ACCOUNT WHERE Gebruikersnaam = :usr AND Wachtwoord = :pass";
@@ -82,6 +92,11 @@ namespace Individuele_Opdracht_Bax
 
         }
 
+        /// <summary>
+        /// Return to the previously accessed webpage.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnReturn_Click(object sender, EventArgs e)
         {
             object refUrl = ViewState["RefUrl"];
