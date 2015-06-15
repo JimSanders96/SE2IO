@@ -54,7 +54,7 @@ namespace Individuele_Opdracht_Bax
 
                 while (r.Read())
                 {
-                    var uc = (Product)Page.LoadControl("~/Product.ascx");
+                    var uc = (Product)Page.LoadControl("~/UserControls/Product.ascx");
 
                     uc.Name = (string)r["naam"];
                     uc.ImageLink = (string)r["standaardplaatje"];

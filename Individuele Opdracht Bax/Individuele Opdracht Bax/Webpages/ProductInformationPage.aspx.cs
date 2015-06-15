@@ -122,7 +122,7 @@ namespace Individuele_Opdracht_Bax.Webpages
 
                 while (r.Read())
                 {
-                    var uc = (Review)Page.LoadControl("~/Review.ascx");
+                    var uc = (Review)Page.LoadControl("~/UserControls/Review.ascx");
 
                     uc.Rating = Convert.ToInt32(r["beoordeling"]);
                     uc.Username = (string)r["gebruikersnaam"];

@@ -50,7 +50,7 @@ namespace Individuele_Opdracht_Bax
 
                 while (r.Read())
                 {
-                    var uc = (Category)Page.LoadControl("~/Category.ascx");
+                    var uc = (Category)Page.LoadControl("~/UserControls/Category.ascx");
 
                     uc.Name = (string)r["naam"];
                     uc.ImageLink = (string)r["plaatje"];

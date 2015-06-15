@@ -60,11 +60,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Category.ascx" />
+    <Content Include="UserControls\Category.ascx" />
     <Content Include="Images\Bax_Logo.jpg" />
-    <Content Include="Review.ascx" />
+    <Content Include="UserControls\Review.ascx" />
     <Content Include="Webpages\Login.aspx" />
-    <Content Include="Product.ascx" />
+    <Content Include="UserControls\Product.ascx" />
     <Content Include="Webpages\ProductInformationPage.aspx" />
     <Content Include="Webpages\ProductPage.aspx" />
     <Content Include="Web.config">
@@ -73,20 +73,20 @@
     <Content Include="Webpages\index.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.ascx.cs">
+    <Compile Include="UserControls\Category.ascx.cs">
       <DependentUpon>Category.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Category.ascx.designer.cs">
+    <Compile Include="UserControls\Category.ascx.designer.cs">
       <DependentUpon>Category.ascx</DependentUpon>
     </Compile>
     <Compile Include="DbProvider.cs" />
     <Compile Include="App_Data\ShoppingCart.cs" />
-    <Compile Include="Review.ascx.cs">
+    <Compile Include="UserControls\Review.ascx.cs">
       <DependentUpon>Review.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Review.ascx.designer.cs">
+    <Compile Include="UserControls\Review.ascx.designer.cs">
       <DependentUpon>Review.ascx</DependentUpon>
     </Compile>
     <Compile Include="Webpages\Login.aspx.cs">
@@ -96,11 +96,11 @@
     <Compile Include="Webpages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Product.ascx.cs">
+    <Compile Include="UserControls\Product.ascx.cs">
       <DependentUpon>Product.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Product.ascx.designer.cs">
+    <Compile Include="UserControls\Product.ascx.designer.cs">
       <DependentUpon>Product.ascx</DependentUpon>
     </Compile>
     <Compile Include="Webpages\ProductInformationPage.aspx.cs">
