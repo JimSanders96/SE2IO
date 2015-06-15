@@ -16,6 +16,16 @@ namespace UnitTestProject1
 
             r.Read();
         }
-        
+
+        [TestMethod]
+        public void TestGetCustomerId()
+        {
+            int id = 0;
+
+            Individuele_Opdracht_Bax.ShoppingCart cart = new Individuele_Opdracht_Bax.ShoppingCart("Jimbolul");
+            id = cart.GetCustomerId("Jimbolul");
+
+            Assert.AreEqual(101, id);
+        }
     }
 }
